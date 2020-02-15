@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<script type="text/javascript"  src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"> </script>
+  <script>
+    function showFinish()
+    {
+var x = $("p:last").text();			/*讀取最後一個<p>標簽的文字內容*/
+alert(x);
+
+$("input#username").val("your name here");	/*設定id為”username”控制項的value*/
+
+var z = $("#container").attr("width")  /*讀取id為”container”的標簽的”width”屬性*/
+alert(z);
+
+/*將id為”mainpage”的標簽的”href”屬性設定為//index.html*/
+$("#mainpage").attr("href", "//index.html")  
+
+$("p").css("background-color", "red");	/*將所有<p>標簽的background-color設定為red*/
+
+    }
+  </script>
+</head>
+
+<body onload = "showFinish();">			<!—事件定義程式碼 -->
+<div id = "container" width="500px">
+<p>這是第一段</p>
+<p>這是第二段</p>
+<input id="username"/>
+<a id="mainpage"> click me to go to index.html</a>
+<p>這是最後一段</p>
+</div>
+</body>
+</html>

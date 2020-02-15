@@ -1,0 +1,23 @@
+
+
+<html>
+<head>
+<title> You can't close me!</title>
+  <script>
+    function showFinish()
+    {
+var title = window.document.title ;				//獲得文件的title
+
+alert(title);
+window.location.reload();						//重新更新頁面
+        
+    }
+  </script>
+</head>
+
+<body onload = "showFinish();">			<!—事件定義程式碼 -->
+<!--  其他頁面內容 -->
+<div id = “container”> </div>
+</body>
+</html>
+

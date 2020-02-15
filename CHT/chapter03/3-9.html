@@ -1,0 +1,20 @@
+<html>
+<head>
+<!—內定內嵌模式 -->
+<script>
+function hello()
+{
+document.getElementById("message").innerHTML="Hello world of Javascript";
+}
+</script>
+
+<!—外部連結模式 -->
+<script src="myScript.js"></script>
+</head>
+
+<body>
+<div id="message">  </div>
+<!— button是一個按鈕控制項，其onclick屬性定義當使用者點擊按鈕時執行的javascript指令稿 -->
+<button type="button" onclick="hello();">Try it</button>   
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<script type="text/javascript"  src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"> </script>
+  <script>
+    function showFinish()
+    {
+
+$("button").hide();				/*隱藏所有<button>標簽*/
+
+/*將所有<button>標示用慢速漸層為50%透明度，並在完成漸層後出現alert訊息框*/
+$("button").fadeTo("slow", 0.5, function(){
+    alert("漸層已經完成");
+  });		
+
+/*將所有<p>標示用快速執行動畫（搬移到x座標100px處，並改變寬度為650px），
+並在完成漸層後出現alert訊息框*/
+$("p").animate({
+    left:'100px',
+    width:'650px'
+  } ,
+ "fast", function(){
+    alert("自訂動畫已經完成");
+  });			
+
+$("#paragraph1").stop();			/*停止id=paragraph1標示的動畫*/
+
+
+    }
+  </script>
+</head>
+
+<body onload = "showFinish();">			<!—事件定義程式碼 -->
+<button id ="btn1"> btn1</button>
+<button id ="btn2"> btn2</button>
+<p style="background-color:red">動畫段落</p>
+<p id = "paragraph1" style="background-color:green">無動畫段落</p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>  
+</html>      
+    <head>  
+        <title>訊息輸入頁面</title>  
+    </head>  
+    <body>
+        <form action="/moments/input" method="post">   
+        {% csrf_token %}  
+            <fieldset>  
+                <legend>你要參加２０１４年７月ＪＬＰＴ的哪個等級考試？</legend>  
+                        {{ form.as_p }}  
+                        <input type="submit" value="submit" />  
+            </fieldset>  
+        </form>  
+    </body>  
+</html>  
